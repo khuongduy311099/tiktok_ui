@@ -1,5 +1,4 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
      --primary: #fe2c55;
@@ -23,7 +22,7 @@ html {
 }
 
 body {
-     font-family: 'Montserrat', sans-serif;
+     font-family: 'ProximaNova', sans-serif;
      font-size: 1.6 rem;
      line-height: 1.5;
      text-rendering: optimizeSpeed;
@@ -37,4 +36,30 @@ button, input, [tabindex] {
 a[href] {
      color: var(--text-color);
      text-decoration: none;
+}
+
+//font embeded
+
+@font-face {
+     font-family: ProximaNova;
+     src: url('/assets/font/Proxima-Nova-Regular.woff2');
+     font-weight: 400;
+}
+
+@font-face {
+     font-family: ProximaNova;
+     src: url('/assets/font/Proxima-Nova-Semibold.woff2');
+     font-weight: 600;
+}
+
+@font-face {
+     font-family: ProximaNova;
+     src: url('/assets/font/Proxima-Nova-Bold.woff2');
+     font-weight: 700;
+}
+
+@font-face {
+     font-family: SofiaPro;
+     src: url('/assets/font/sofiapro-bold.woff2');
+     font-weight: 700;
 }

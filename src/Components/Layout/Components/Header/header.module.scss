@@ -1,161 +1,84 @@
 .wrapper {
-     --search-border-radius: 92px;
-     --search-height: 46px;
-     --search-top-spacer: 9px;
-     --search-btn-width: 52px;
-     width: 100%;
-     height: var(--default--layout--header-height, 60px);
-     box-shadow: 0px 2px 2px rgb(0 0 0 / 12%);
-     display: flex;
-     justify-content: center;
+    --search-border-radius: 92px;
+    --search-height: 46px;
+    --search-top-spacer: 9px;
+    --search-btn-width: 52px;
+    width: 100%;
+    height: var(--default--layout--header-height, 60px);
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 12%);
+    display: flex;
+    justify-content: center;
 }
 
 .inner {
-     height: 100%;
-     width: var(--default--layout--width, 1150px);
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     padding: 0 var(--default-layout-horizontal-spacer);
+    height: 100%;
+    width: var(--default--layout--width, 1150px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--default-layout-horizontal-spacer);
 }
 
 .logo {
-     &:hover {
-          cursor: pointer;
-     }
+    &:hover {
+        cursor: pointer;
+    }
 }
-
-.search, .search-result {
-     width: 361px;
-}
-
-.search-result {
-
-}
-
-.search-label {
-     height: 30px;
-     padding: 5px 12px;
-     font-size: 14px;
-     line-height: 20px;
-     font-weight: 600;
-     color: rgba(22, 24, 35, 0.5);
-}
-
-.search {
-     position: relative;
-     height: var(--search-height);
-     background-color: #f1f1f2;
-     border-radius: var(--search-border-radius);
-     display: flex;
-     padding-left: 16px;
-     border: 1.5px solid transparent;
-
-     input {
-          flex: 1;
-          height: 100%;
-          color: var(--black);
-          font-size: 1.6rem;
-          caret-color: var(--primary);
-          padding: 12px 0;
-          background-color: inherit;
-     }
-
-     input:not(:placeholder-shown) ~ .search-btn {
-          color: black;
-     }
-
-     input:not(:placeholder-shown) ~ .loading {
-          display: none;
-     }
-
-     &::after {
-          content: "";
-          position: absolute;
-          top: var(--search-top-spacer);
-          right: var(--search-btn-width);
-          height: calc(var(--search-height) - var(--search-top-spacer)*2);
-          width: 1px;
-          background-color: rgba(22, 24, 35, .12);
-     }
-
-     &:focus-within{
-          border: 1.5px solid rgba(22, 24, 35, .2);
-     }
-}
-
-
-
-.clear, .loading {
-     position: absolute;
-     right: calc(var(--search-btn-width) + 16px);
-     top: 50%;
-     transform: translateY(-50%);
-     color: rgba(22, 24, 35, 0.34);
-}
-
-
-.search-btn {
-     width: var(--search-btn-width);
-     height: 100%;
-     border-top-right-radius: var(--search-border-radius);
-     border-bottom-right-radius: var(--search-border-radius);
-     font-size: 1.8rem;
-     color: rgba(22, 24, 35, 0.34);
-     &:hover {
-          background-color: rgba(22, 24, 35, .03);
-          cursor: pointer
-     }
-
-     &:active {
-          background-color: rgba(22, 24, 35, .06);
-     }
-}
-
 
 .action {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .action-btn {
-     background-color: transparent;
-     font-size: 2.6rem;
-     width: 26px;
-     height: 26px;
-     margin-left: 12px;
-     color: var(--primary);
-     cursor: pointer;
+    background-color: transparent;
+    font-size: 2.6rem;
+    width: 26px;
+    height: 26px;
+    margin-left: 12px;
+    cursor: pointer;
 }
 
 .action-icon {
-     display: block;
-     background-color: transparent;
-     margin-left: 16px;
-     padding: 4px 8px;
-     font-size: 2rem;
-     
-     
-     &:hover {
-          cursor: pointer;
-     }
+    display: block;
+    background-color: transparent;
+    margin-left: 16px;
+    padding: 4px 8px;
+    font-size: 2rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.icon-components {
+    margin-top: -3px;
+
+    &.inbox {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    &.messages {
+        width: 28px;
+        height: 32px;
+    }
 }
 //action header
 
-
 .user-avatar {
-     width: 40px;
-     height: 40px;
-     border-radius: 50%;
-     object-fit: cover;
-     margin-left: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 24px;
 }
 
 //menu
 
 .menu-icon {
-     font-weight: 100;
+    font-weight: 100;
 }
 
-//custom css 
+//custom css

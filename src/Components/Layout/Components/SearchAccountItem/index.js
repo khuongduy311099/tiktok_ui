@@ -1,28 +1,24 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
-import classNames from "classnames/bind";
-import styles from "./SearchAccountItem.module.scss"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import classNames from 'classnames/bind';
+import styles from './SearchAccountItem.module.scss';
+import Image from '../Images';
+import { Link } from 'react-router-dom';
+const cx = classNames.bind(styles);
 
-
-const cx=classNames.bind(styles)
-
-function SearchAccountItem() {
-     return (
-          <div className={cx('wrapper')}>
-               <img 
-                    className={cx('avatar')}
-                    alt="Con Chó"
-                    src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg"
-               />
-               <div className={cx('info')}>
-                    <h4 className={cx('name')}>
-                         <span>Con Chó</span>
-                         <FontAwesomeIcon icon={faCheckCircle} className={cx('icon-official')} />
-                    </h4>
-                    <span className={cx('username')}>Con Chó nàyyyyyyyyyyyyyyyyyyyy</span>
-               </div>
-          </div>
-     )
+function SearchAccountItem({ data }) {
+    return (
+        <Link className={cx('wrapper')} to={`/@${data.nickname}`}>
+            <Image className={cx('avatar')} alt={data.full_name} src={data.avatar} />
+            <div className={cx('info')}>
+                <h4 className={cx('name')}>
+                    <span>{data.full_name}</span>
+                    {data.tick && <FontAwesomeIcon icon={faCheckCircle} className={cx('icon-official')} />}
+                </h4>
+                <span className={cx('username')}>{data.nickname}</span>
+            </div>
+        </Link>
+    );
 }
 
 export default SearchAccountItem;
