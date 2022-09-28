@@ -6,7 +6,8 @@ import { Wrapper as PopperWrapper } from '../Popper';
 import { useState, useRef, useEffect } from 'react';
 import HeadlessTippy from '@tippyjs/react/headless';
 import SearchAccountItem from '../SearchAccountItem';
-
+import { useDebounce } from '~/Hooks';
+import * as searchServices from '~/Api-services/searchServices';
 const cx = classNames.bind(styles);
 
 function Search() {
@@ -15,26 +16,26 @@ function Search() {
     const [showResult, setShowResult] = useState(true);
     const [loading, setloading] = useState(false);
 
+    const debounced = useDebounce(searchValue, 600);
+
     const inputRef = useRef();
 
     useEffect(() => {
-        if (!searchValue.trim()) {
+        if (!debounced.trim()) {
             setSearchResult([]);
             return;
         }
 
-        setloading(true);
+        const fetchApi = async () => {
+            setloading(true);
 
-        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(searchValue)}&type=less`)
-            .then((res) => res.json())
-            .then((api) => {
-                setSearchResult(api.data);
-                setloading(false);
-            })
-            .catch(() => {
-                setloading(false);
-            });
-    }, [searchValue]);
+            const result = await searchServices.search(debounced);
+            setSearchResult(result);
+
+            setloading(false);
+        };
+        fetchApi();
+    }, [debounced]);
 
     const handleHideResult = () => {
         setShowResult(false);
@@ -67,7 +68,6 @@ function Search() {
                     placeholder="Search accounts and videos"
                     spellCheck="false"
                     onChange={(e) => {
-                        setSearchResult([]);
                         setSearchValue(e.target.value);
                     }}
                     onFocus={() => setShowResult(true)}
