@@ -62,6 +62,206 @@ const MENU_ITEMS = [
                     code: 'frc',
                     title: 'Le français',
                 },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'esp',
+                    title: 'Español',
+                },
+                {
+                    type: 'language',
+                    code: 'frc',
+                    title: 'Le français',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'esp',
+                    title: 'Español',
+                },
+                {
+                    type: 'language',
+                    code: 'frc',
+                    title: 'Le français',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'esp',
+                    title: 'Español',
+                },
+                {
+                    type: 'language',
+                    code: 'frc',
+                    title: 'Le français',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'esp',
+                    title: 'Español',
+                },
+                {
+                    type: 'language',
+                    code: 'frc',
+                    title: 'Le français',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'esp',
+                    title: 'Español',
+                },
+                {
+                    type: 'language',
+                    code: 'frc',
+                    title: 'Le français',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'esp',
+                    title: 'Español',
+                },
+                {
+                    type: 'language',
+                    code: 'frc',
+                    title: 'Le français',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'esp',
+                    title: 'Español',
+                },
+                {
+                    type: 'language',
+                    code: 'frc',
+                    title: 'Le français',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'esp',
+                    title: 'Español',
+                },
+                {
+                    type: 'language',
+                    code: 'frc',
+                    title: 'Le français',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'esp',
+                    title: 'Español',
+                },
+                {
+                    type: 'language',
+                    code: 'frc',
+                    title: 'Le français',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'esp',
+                    title: 'Español',
+                },
+                {
+                    type: 'language',
+                    code: 'frc',
+                    title: 'Le français',
+                },
             ],
         },
     },
