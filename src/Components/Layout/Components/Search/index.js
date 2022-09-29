@@ -45,6 +45,14 @@ function Search() {
         setSearchValue('');
         inputRef.current.focus();
     };
+
+    const handleChange = (e) => {
+        const inputSearchValue = e.target.value;
+        if (!inputSearchValue.startsWith('  ')) {
+            setSearchValue(inputSearchValue);
+        }
+    };
+
     return (
         <HeadlessTippy
             render={(attrs) => (
@@ -52,7 +60,7 @@ function Search() {
                     <PopperWrapper>
                         <h4 className={cx('search-label')}>Accounts</h4>
                         {searchResult.map((result) => (
-                            <SearchAccountItem data={result} key={result.id} />
+                            <SearchAccountItem data={result} key={result.id} onClick={handleClear} />
                         ))}
                     </PopperWrapper>
                 </div>
@@ -67,9 +75,7 @@ function Search() {
                     value={searchValue}
                     placeholder="Search accounts and videos"
                     spellCheck="false"
-                    onChange={(e) => {
-                        setSearchValue(e.target.value);
-                    }}
+                    onChange={handleChange}
                     onFocus={() => setShowResult(true)}
                 />
                 {!!searchValue && !loading && (
@@ -78,7 +84,7 @@ function Search() {
                     </button>
                 )}
                 {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
-                <button className={cx('search-btn')}>
+                <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </button>
             </div>

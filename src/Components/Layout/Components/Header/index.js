@@ -1,6 +1,7 @@
 //react
 import { Fragment } from 'react';
 // import ReactDom from 'react-dom';
+import { Link } from 'react-router-dom';
 //Tippy react lib
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional
@@ -29,6 +30,8 @@ import { faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { InboxIcon, MessagesIcon } from '~/Components/Icons';
 import Image from '../Images';
 import Search from '../Search';
+//config routes
+import routesconfig from '~/config/routes';
 //đặt biến
 const cx = classNames.bind(styles);
 
@@ -112,7 +115,9 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img src={images.logo} alt="Tiktok" />
+                    <Link to={routesconfig.home} className={cx('logo-link')}>
+                        <img src={images.logo} alt="Tiktok" />
+                    </Link>
                 </div>
                 <Search />
                 <div className={cx('action')}>

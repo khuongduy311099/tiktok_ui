@@ -6,9 +6,9 @@ import Image from '../Images';
 import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles);
 
-function SearchAccountItem({ data }) {
+function SearchAccountItem({ data, onClick }) {
     return (
-        <Link className={cx('wrapper')} to={`/@${data.nickname}`}>
+        <Link className={cx('wrapper')} to={`/@${data.nickname}`} onClick={onClick}>
             <Image className={cx('avatar')} alt={data.full_name} src={data.avatar} />
             <div className={cx('info')}>
                 <h4 className={cx('name')}>
