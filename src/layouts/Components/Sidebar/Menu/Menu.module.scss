@@ -1,0 +1,39 @@
+.menu-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color ease-in-out 200ms;
+
+    &.active {
+        color: var(--primary);
+
+        .active-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon {
+            display: none;
+        }
+    }
+
+    &:hover {
+        background-color: #f8f8f8;
+    }
+}
+
+.title {
+    margin-left: 10px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.active-icon {
+    display: none;
+}

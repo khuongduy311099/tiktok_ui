@@ -3,6 +3,7 @@ import Home from '~/Pages/Home';
 import Following from '~/Pages/Following';
 import Profile from '~/Pages/Profile';
 import Upload from '~/Pages/Upload';
+import Live from '~/Pages/Live';
 //config route
 import config from './index';
 // layout
@@ -30,5 +31,9 @@ export const publicRoutes = [
         path: config.routes.search,
         component: Search,
         layout: null,
+    },
+    {
+        path: config.routes.live,
+        component: Live,
     },
 ]; // kh cần đăng nhập để xem

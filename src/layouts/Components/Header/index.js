@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 //Tippy react lib
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional
-//proptype lib
-import PropType from 'prop-types';
 //css
 import classNames from 'classnames/bind';
 import styles from './header.module.scss';
@@ -316,7 +314,7 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <Link to={config.routes.home} className={cx('logo-link')}>
+                    <Link to={config.routes.home} className={cx('logo-link')} n>
                         <img src={images.logo} alt="Tiktok" />
                     </Link>
                 </div>

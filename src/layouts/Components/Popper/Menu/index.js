@@ -30,31 +30,35 @@ function Menu({ children, items = [], onChange = () => {}, hideOnClick = false }
             );
         });
     };
+    const renderResult = (attrs) => (
+        <div className={cx('content')} tabIndex="-1" {...attrs}>
+            <PopperWrapper className={cx('content')}>
+                {history.length > 1 && (
+                    <Header
+                        title={current.title}
+                        onBack={() => {
+                            setHistory(history.slice(0, history.length - 1));
+                        }}
+                    />
+                )}
+                <div className={cx('menu-body')}>{renderItem()}</div>
+            </PopperWrapper>
+        </div>
+    );
+
+    const handleResetToFirstMenu = () => {
+        setHistory((prev) => prev.slice(0, 1));
+    };
+
     return (
         <Tippy
             placement="bottom-end"
             interactive
             delay={[0, 800]}
-            onHide={() => {
-                setHistory((prev) => prev.slice(0, 1));
-            }}
+            onHide={handleResetToFirstMenu}
             offset={[15, 15]}
             hideOnClick={hideOnClick}
-            render={(attrs) => (
-                <div className={cx('content')} tabIndex="-1" {...attrs}>
-                    <PopperWrapper className={cx('content')}>
-                        {history.length > 1 && (
-                            <Header
-                                title={current.title}
-                                onBack={() => {
-                                    setHistory(history.slice(0, history.length - 1));
-                                }}
-                            />
-                        )}
-                        <div className={cx('menu-body')}>{renderItem()}</div>
-                    </PopperWrapper>
-                </div>
-            )}
+            render={renderResult}
         >
             {children}
         </Tippy>
