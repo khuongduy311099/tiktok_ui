@@ -1,0 +1,64 @@
+.popper-wrapper {
+    max-width: 100%;
+    background-color: white;
+    height: 170px;
+    width: 320px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 4px 16px;
+}
+
+.popper-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.icon-official {
+    color: #69c9d0;
+    margin-left: 4px;
+}
+
+.info {
+    display: flex;
+    margin-top: 8px;
+}
+
+.follow,
+.likes {
+    display: flex;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.likes {
+    margin-left: 16px;
+}
+
+.btn {
+    display: flex;
+    width: 100px;
+    height: 32px !important;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.nickname {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.name {
+    font-size: 14px;
+}
+
+.text-info {
+    margin-left: 4px;
+}

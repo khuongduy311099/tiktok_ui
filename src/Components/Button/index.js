@@ -67,7 +67,7 @@ function Button({
 
 Button.propTypes = {
     to: PropTypes.string,
-    primary: PropTypes.string,
+    primary: PropTypes.bool,
     outline: PropTypes.bool,
     small: PropTypes.bool,
     href: PropTypes.bool,
